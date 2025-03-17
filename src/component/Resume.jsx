@@ -99,7 +99,7 @@ const EventCard = ({ heading, subheading, description }) => {
 const educationData = [
   {
     heading: "Bachelor of Engineering in Computer Science and Engineering",
-    subheading: "2021 — Expected Graduation: 2025",
+    subheading: "2021 — 2025",
     description:
       "Currently navigating the world of Data Structures, Algorithms, Web, and Mobile App Development at Chandigarh University turning caffeine into code and ideas into projects that actually work!",
   },
