@@ -14,6 +14,7 @@ import About from "./component/About";
 import Resume from "./component/Resume";
 import Projects from "./component/Projects";
 import Contacts from "./component/Contacts";
+import avatar from "./assets/avatar.png";
 
 const App = () => {
   const [active, setActive] = useState("about"); // Manage Active Section
@@ -28,7 +29,7 @@ const App = () => {
           {/* Profile Image */}
           <div className="w-[200px] h-[200px] bg-[#2d2d2d] rounded-2xl mt-5 flex flex-col justify-center items-center">
             <img
-              src="./src/assets/avatar.png"
+              src={avatar}
               alt="Profile"
               className="w-full h-full object-cover rounded-2xl"
             />
@@ -148,7 +149,7 @@ const App = () => {
           <Navbar active={active} setActive={setActive} />
 
           {/* Dynamic Content - Overlapping Sections */}
-          <div className="absolute inset-0">  
+          <div className="absolute inset-0">
             {active === "about" && <About />}
             {active === "resume" && <Resume />}
             {active === "projects" && <Projects />}

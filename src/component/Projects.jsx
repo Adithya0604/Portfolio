@@ -1,47 +1,52 @@
 import React, { useState } from "react";
+import healthCare from "../assets/HealthCare.png";
+import bankingApp from "../assets/BankingApplication.png";
+import todoList from "../assets/ToDoList.jpg";
+import taskManager from "../assets/TaskManager.png";
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const categories = ["All", "Mobile Application", "Web Application"];
-  
+
   // Project data with category information
   const projectsData = [
     {
-      img: "./src/assets/WeatherForecast.png",
+      img: bankingApp,
       title: "Weather Forecast",
       desc: "Mobile Application",
-      category: "Mobile Application"
+      category: "Mobile Application",
     },
     {
-      img: "./src/assets/HealthCare.png",
+      img: healthCare,
       title: "HealthCare Management",
       desc: "Web Development",
-      category: "Web Application"
+      category: "Web Application",
     },
     {
-      img: "./src/assets/BankingApplication.png",
+      img: bankingApp,
       title: "Banking Application",
       desc: "Full Stack Development",
-      category: "Web Application"
+      category: "Web Application",
     },
     {
-      img: "./src/assets/ToDoList.jpg",
+      img: todoList,
       title: "ToDo List",
       desc: "Mobile Application",
-      category: "Mobile Application"
+      category: "Mobile Application",
     },
     {
-      img: "./src/assets/TaskManager.png",
+      img: taskManager,
       title: "Task Manager",
       desc: "Productivity Tool",
-      category: "Web Application"
+      category: "Web Application",
     },
   ];
-  
+
   // Filter projects based on selected category
-  const filteredProjects = selectedCategory === "All" 
-    ? projectsData 
-    : projectsData.filter(project => project.category === selectedCategory);
+  const filteredProjects =
+    selectedCategory === "All"
+      ? projectsData
+      : projectsData.filter((project) => project.category === selectedCategory);
 
   return (
     <div className="absolute inset-0 flex flex-col lg:flex-row items-start justify-start bg-neutral-900 text-white p-8 rounded-3xl border-0.1 overflow-y-auto">
